@@ -32,4 +32,4 @@
   Output: You can find the square root of any non-negative number by using the sqrt function. Find the square root of 9. (Provide the desired number of 9 to x i.e. x=9)
   CorrectAnswer: sqrt(x=9)
   AnswerTests: omnitest(correctExpr='sqrt(x=9)')
-  Hint: Type sqrt(x=9) into the console and press Enter. 
+  Hint: Type sqrt(x=9) into the console and press Enter.
