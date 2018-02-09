@@ -1,0 +1,37 @@
+- Class: meta
+  Course: R - The Basics
+  Lesson: Part a
+  Author: Sarah Gill
+  Type: Standard
+  Organization: TModal
+  Version: 2.4.3
+
+- Class: text
+  Output: The first lesson explores the basic building blocks of R and its programming language
+  
+- Class: cmd_question
+  Output: In its simplest role, R can be used as a mere calculator. For example, type 2 + 3 into the consule and press Enter.
+  CorrectAnswer: 2 + 3
+  AnswerTests: omnitest(correctExpr='2 + 3')
+  
+- Class: cmd_question
+  Output: R will simply print the answer of 5. In R, standard mathematical rules apply and follow PEDMAS; parentheses, exponents, multiplication,
+          division, addition, subtraction. For example type 14/2+5 into the consule.
+  CorrectAnswer: 14/2+5
+  AnswerTests: omnitest(correctExpr='14/2+5')
+
+- Class: cmd_question
+  Output: Then type 14/(2+5) into the consule.
+  CorrectAnswer: 14/(2+5)
+  AnswerTests: omnitest(correctExpr='14/(2+5)')
+
+- Class: text
+  Output: The rules that have been applied result in two different answers so care needs to be taken to ensure you are completing the correct calulation.
+  
+- Class: cmd_question
+  Output: You can find the square root of any non-negative number by using the sqrt function. Find the square root of 9. (Provide the desired number of 9 to x i.e. x=9)
+  CorrectAnswer: sqrt(x=9)
+  AnswerTests: omnitest(correctExpr='sqrt(x=9)')
+  Hint: Type sqrt(x=9) into the console and press Enter. 
+  
+  
