@@ -15,8 +15,7 @@
   AnswerTests: omnitest(correctExpr='2 + 3')
 
 - Class: cmd_question
-  Output: R will simply print the answer of 5. In R, standard mathematical rules apply and follow PEDMAS; parentheses, exponents, multiplication,
-          division, addition, subtraction. For example type 14/2+5 into the consule.
+  Output: R will simply print the answer of 5. In R, standard mathematical rules apply and follow PEDMAS; parentheses, exponents, multiplication, division, addition, subtraction. For example type 14/2+5 into the consule.
   CorrectAnswer: 14/2+5
   AnswerTests: omnitest(correctExpr='14/2+5')
 
