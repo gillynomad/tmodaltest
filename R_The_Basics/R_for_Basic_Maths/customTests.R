@@ -41,7 +41,7 @@ notify <- function() {
       attachmentObject <- mime_part(x=attachmentPath,name=attachmentName)
       bodyWithAttachment <- list(body,attachmentObject)
 
-      sendmail(from=from,to=to,subject=subject,msg=bodyWithAttachment)
+      sendmail(to=address,subject=subject,msg=bodyWithAttachment)
 
       # Send email
       #swirl:::email(address, subject, bodyWithAttachment)
