@@ -1,6 +1,6 @@
 - Class: meta
   Course: R - The Basics
-  Lesson: Part a
+  Lesson: Arthimetic and Assiging Objects
   Author: Sarah Gill
   Type: Standard
   Organization: TModal
@@ -28,7 +28,19 @@
   Output: The rules that have been applied result in two different answers so care needs to be taken to ensure you are completing the correct calulation.
 
 - Class: cmd_question
-  Output: You can find the square root of any non-negative number by using the sqrt function. Find the square root of 9. (Provide the desired number of 9 to x i.e. x=9)
+  Output: Next up, square roots. You can find the square root of any non-negative number by using the sqrt function. Use the concole to find the square root of 9. (Provide the desired number of 9 to x i.e. x=9)
   CorrectAnswer: sqrt(x=9)
   AnswerTests: omnitest(correctExpr='sqrt(x=9)')
   Hint: Type sqrt(x=9) into the console and press Enter.
+
+- Class: text
+  Output: At some stage you may need to translate more complicated arithmetic formula into code. Some expressions may require extra parentheses especially when dealing with exponents in R.
+
+- Class: cmd_question
+  Output: If the exponent itself is an arthimetic calculation then it must appear inside parentheses. For example 2 to the power of 3 plus 1 would be 2^(3+1). What would 2 to the power of 4.25 minus 1/4 be?
+  CorrectAnswer: 2^(4.25-1/4)
+  AnswerTests: omnitest(correctExpr='2^(4.25-1/4)')
+  Hint: The exponent 4.25-1/4 would be inside the parentheses
+
+- Class: text
+  Output: Note that R treats negative numbers as a calculation. This would mean -3 is seen by R as -1*3. Therefore to the power of -3 would be written as 2^(-3).
