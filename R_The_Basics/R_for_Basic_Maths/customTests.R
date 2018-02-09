@@ -36,17 +36,15 @@ notify <- function() {
       subject <- paste(name, "just completed", course_name, "-", lesson_name)
       body = "Congratulations on completing this lesson. Please find attached a jobaid describing some of the important code used."
 
-      library(sendmailR)
-
       attachmentPath <- "R_for_Basic_Maths/Arthimetic_and_Objects_JobAid.pdf"
       #key part for attachments, put the body and the mime_part in a list for msg
       attachmentObject <- mime_part(x=attachmentPath,name=attachmentName)
       bodyWithAttachment <- list(body,attachmentObject)
 
-      #sendmail(from=from,to=to,subject=subject,msg=bodyWithAttachment,control=mailControl)
+      sendmail(from=from,to=to,subject=subject,msg=bodyWithAttachment,control=mailControl)
 
       # Send email
-      swirl:::email(address, subject, bodyWithAttachment)
+      #swirl:::email(address, subject, bodyWithAttachment)
 
       hrule()
       message("I just tried to create a new email with the following info:\n")
