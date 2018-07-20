@@ -1,0 +1,88 @@
+- Class: meta
+  Course: R - The Basics
+  Lesson: Vectors with Simple Functions
+  Author: Sarah Gill
+  Type: Standard
+  Organization: TModal
+  Version: 2.4.3
+
+- Class: text
+  Output: The second lesson explores the vectors which are essential to handling multiple items in R. They are useful when needing to perform the same calculations or comparisons on multiple sets of data.
+
+- Class: text
+   Output: The syntax used to create a vector in R is c() with the desired points in the vector entered inside the brackets and separated by commas. For example c(1,2,3). Vector entries can also be calculations and object names, for example c(3, 2*5, 25^0.5, obname) where obname <- 18*2
+
+- Class: cmd_question
+  Output: Create a vector showing values 1 to 5 in ascending order and assign it to the object myvec.
+  CorrectAnswer: myvec <- c(1,2,3,4,5)
+  AnswerTests: omnitest(correctExpr='myvec <- c(1,2,3,4,5)')
+
+- Class: text
+  Output: Common or useful functions associated to vectors include seq, rep, sort and length.
+
+- Class: text
+  Output: Creating a sequence separated by intervals of 1 can be created without the use of a function but instead using the colon operator. For example 1:10 can be read as ‘from 1 to 10 (by 1)’.
+
+- Class: text
+  Output: To allow for more flexibility around intervals applied the seq function can be used. seq uses a ‘from’, ‘to’ and ‘by’ value and returns a sequence as a numeric vector. For example seq(from=2, to=10, by=2) gives [1] 2,4,6,8,10
+
+- Class: cmd_question
+  Output: Create a sequence from 5 to 20 using an interval of 3
+  CorrectAnswer: seq(from=5, to=20, by=3)
+  AnswerTests: omnitest(correctExpr='seq(from=5, to=20, by=3)’)
+
+- Class: text
+  Output: Note that while the sequence will always start from the ‘from’ value, the sequence will not always contain the ‘to’ value as it’s dependent on the size of the interval stated. The sequence will never go beyond the stated ‘to’ value.
+
+- Class: text
+  Output: Instead of using ‘by’, the exact number of values required between ‘from’ and ‘to’ can be specified using length.out. This will produce a vector containing the specified number of values evenly spread between ‘from’ and ‘to’.
+
+- Class: cmd_question
+  Output: Create a sequence from 10 to 40 that contains 15 values.
+  CorrectAnswer: seq(from=10, to=40, length.out=15)
+  AnswerTests: omnitest(correctExpr='seq(from=10, to=40, length.out=15)’)
+
+- Class: text
+  Output: Values can be positive or negative. If the ‘by’ value is negative the sequence will decrease. If the value is positive then the sequence will increase.
+
+- Class: text
+  Output: Sequences can be assigned to object names for use at a later point.
+
+- Class: text
+  Output: If the sequence required is simply a repetition of the same value then the rep function can be used instead of seq.
+
+- Class: text
+  Output: The rep function takes the single value or vector to be repeated as x, the number of repetitions required as times and when using a vector for x the number of times to repeat each value in a vector as each. For example, rep(x=1, times=4) or rep(x=c(2,4,6), times=2, each=2)
+
+- Class: cmd_question
+  Output: Create a repetition of the vector c(3, 9, 15), four times with each value of the vector repeating twice.
+  CorrectAnswer: rep(x=c(3,9,15), times=4, each=2)
+  AnswerTests: omnitest(correctExpr='rep(x=c(3,9,15), times=4, each=2)’)
+
+- Class: text
+  Output: If times nor each are specified the R treats them as 1 so the supplied each will only appear once.
+
+- Class: cmd_question
+  Output: The result of rep and seq can be used within a vector as values. Enter the following vector into the console: c(2,6,rep(x=4, times=6), seq(from=5, to=-3, length.out=10)
+  CorrectAnswer: c(2,6,rep(x=4, times=6), seq(from=5, to=-3, length.out=10)
+  AnswerTests: omnitest(correctExpr='c(2,6,rep(x=4, times=6), seq(from=5, to=-3, length.out=10)’)
+
+
+- Class: text
+  Output: Next we will look at sorting a vector using the function sort. Simply supply the vector as x and enter TRUE or FALSE against the argument decreasing where FALSE will sort from smallest to largest and TRUE from largest to smallest.
+
+- Class: cmd_question
+  Output: For example, sort(x=c(6,4,10), decreasing=FALSE) will produce [1] 4 6 10. Sort the vector c(10,1,3,5,6,12) from largest to smallest.
+  CorrectAnswer: sort(x=c(10,1,3,5,6,12),decreasing=TRUE)
+  AnswerTests: omnitest(correctExpr='sort(x=c(10,1,3,5,6,12),decreasing=TRUE)’)
+
+- Class: text
+  Output: Finally, the length function determines how many entries exist in a vector. For example length(x=c(1,2,3)) will equal 3.
+
+- Class: cmd_question
+  Output: Find the length of the vector containing values 2 to 8 with an interval of 1.
+  CorrectAnswer: length(c(2:8))
+  AnswerTests: omnitest(correctExpr='length(c(2:8))’)
+
+- Class: text
+  Output: Note the length will give you the length of the final vector = i.e. if rep or seq have been used the value length will provide a value after these functions have been considered.
